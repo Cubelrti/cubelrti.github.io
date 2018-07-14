@@ -100,7 +100,8 @@ img {
   left: 0;
   position: absolute;
   top: 0;
-  width: 100%; }
+  width: 100%; 
+}
 
 .active .test {
   -webkit-animation: megvii 1s linear forwards;
@@ -108,9 +109,6 @@ img {
 
 @-webkit-keyframes megvii {
   0% {
-    -webkit-filter: blur(4px);
-    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="4" /></filter></svg>#filter');
-            filter: blur(4px);
     opacity: 0;
     -webkit-transform: scale(1.5);
             transform: scale(1.5); }
@@ -121,9 +119,6 @@ img {
 
 @keyframes megvii {
   0% {
-    -webkit-filter: blur(4px);
-    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="4" /></filter></svg>#filter');
-            filter: blur(4px);
     opacity: 0;
     -webkit-transform: scale(1.5);
             transform: scale(1.5); }
