@@ -19,6 +19,7 @@ body, .onepage-wrapper, html {
   padding: 0;
   position: relative;
   -webkit-transform-style: preserve-3d;
+  will-change: transform;
   width: 100%;
 }
 
@@ -103,9 +104,12 @@ img {
   width: 100%; 
 }
 
+.test{
+  opacity: 0;
+}
 .active .test {
-  -webkit-animation: megvii 1s linear forwards;
-          animation: megvii 1s linear forwards; }
+  -webkit-animation: megvii 1s linear 1s forwards;
+          animation: megvii 1s linear 1s forwards; }
 
 @-webkit-keyframes megvii {
   0% {
