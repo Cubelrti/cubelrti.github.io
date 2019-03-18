@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Front-End Design Patterns | Cubelrti&#39;s Blog</title>
+    <meta name="description" content="Just playing around">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.854efcde.css" as="style"><link rel="preload" href="/assets/js/app.f42c0b44.js" as="script"><link rel="preload" href="/assets/js/11.c36dcbcb.js" as="script"><link rel="prefetch" href="/assets/js/10.516d8242.js"><link rel="prefetch" href="/assets/js/12.e895b184.js"><link rel="prefetch" href="/assets/js/13.ec7be9a7.js"><link rel="prefetch" href="/assets/js/14.54d29f87.js"><link rel="prefetch" href="/assets/js/15.e407cc44.js"><link rel="prefetch" href="/assets/js/16.db49905b.js"><link rel="prefetch" href="/assets/js/17.736569b1.js"><link rel="prefetch" href="/assets/js/18.1a4266aa.js"><link rel="prefetch" href="/assets/js/19.fab2abb6.js"><link rel="prefetch" href="/assets/js/2.ce88158f.js"><link rel="prefetch" href="/assets/js/20.556d670c.js"><link rel="prefetch" href="/assets/js/21.dc368674.js"><link rel="prefetch" href="/assets/js/22.5febb538.js"><link rel="prefetch" href="/assets/js/23.a8022afa.js"><link rel="prefetch" href="/assets/js/24.12852a72.js"><link rel="prefetch" href="/assets/js/25.5a2f1e7f.js"><link rel="prefetch" href="/assets/js/26.d78beae1.js"><link rel="prefetch" href="/assets/js/27.5cdcdcdf.js"><link rel="prefetch" href="/assets/js/28.4adfd5ba.js"><link rel="prefetch" href="/assets/js/29.a67dfb0b.js"><link rel="prefetch" href="/assets/js/3.2891e7af.js"><link rel="prefetch" href="/assets/js/30.52bb0b17.js"><link rel="prefetch" href="/assets/js/31.bc58c029.js"><link rel="prefetch" href="/assets/js/32.c32f2855.js"><link rel="prefetch" href="/assets/js/33.353142fa.js"><link rel="prefetch" href="/assets/js/34.37af366f.js"><link rel="prefetch" href="/assets/js/35.9bbb247e.js"><link rel="prefetch" href="/assets/js/36.dcd775a7.js"><link rel="prefetch" href="/assets/js/37.7a866a32.js"><link rel="prefetch" href="/assets/js/38.402538ca.js"><link rel="prefetch" href="/assets/js/39.536dee2f.js"><link rel="prefetch" href="/assets/js/4.079b915f.js"><link rel="prefetch" href="/assets/js/40.53a05fc2.js"><link rel="prefetch" href="/assets/js/41.e99a5f5e.js"><link rel="prefetch" href="/assets/js/42.74be2de5.js"><link rel="prefetch" href="/assets/js/43.6a321652.js"><link rel="prefetch" href="/assets/js/44.254475de.js"><link rel="prefetch" href="/assets/js/45.bea33be6.js"><link rel="prefetch" href="/assets/js/46.c1408df5.js"><link rel="prefetch" href="/assets/js/47.74ba1c55.js"><link rel="prefetch" href="/assets/js/48.91bdc6a5.js"><link rel="prefetch" href="/assets/js/49.b8e75933.js"><link rel="prefetch" href="/assets/js/5.b2c7c0bf.js"><link rel="prefetch" href="/assets/js/50.efea2307.js"><link rel="prefetch" href="/assets/js/51.174b1c37.js"><link rel="prefetch" href="/assets/js/52.fd97caa2.js"><link rel="prefetch" href="/assets/js/6.632b27cc.js"><link rel="prefetch" href="/assets/js/7.b2cab865.js"><link rel="prefetch" href="/assets/js/8.5c5f6195.js"><link rel="prefetch" href="/assets/js/9.ad4020c1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.854efcde.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Cubelrti's Blog</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="https://cubelrti.github.io/resume/en/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Resume
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div><div class="nav-item"><a href="https://cubelrti.github.io/resume/en/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Resume
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/async-iteration.html" class="sidebar-link">Async Iteration</a></li><li><a href="/bit-manupulation.html" class="sidebar-link">Bit Manupulation</a></li><li><a href="/css-framework-think.html" class="sidebar-link">CSS Framework Think</a></li><li><a href="/css-scrollbars.html" class="sidebar-link">CSS Scrollbars</a></li><li><a href="/darknet-cv2.html" class="sidebar-link">DarkNet &amp; CV2</a></li><li><a href="/event-emitter.html" class="sidebar-link">Event Emitter</a></li><li><a href="/framework-analysis.html" class="sidebar-link">Framework Analysis</a></li><li><a href="/front-end-design-pattern.html" class="active sidebar-link">Front-End Design Patterns</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/front-end-design-pattern.html#开闭原则" class="sidebar-link">开闭原则</a></li><li class="sidebar-sub-header"><a href="/front-end-design-pattern.html#函数式编程" class="sidebar-link">函数式编程</a></li><li class="sidebar-sub-header"><a href="/front-end-design-pattern.html#消息机制" class="sidebar-link">消息机制</a></li><li class="sidebar-sub-header"><a href="/front-end-design-pattern.html#总结" class="sidebar-link">总结</a></li></ul></li><li><a href="/front-end-interview.html" class="sidebar-link">Front-End Interview</a></li><li><a href="/hairline-css.html" class="sidebar-link">Hairline CSS</a></li><li><a href="/image-orientation.html" class="sidebar-link">Image Orientation</a></li><li><a href="/indexed-db.html" class="sidebar-link">IndexedDB Cheatsheet</a></li><li><a href="/intersection-observer.html" class="sidebar-link">Intersection Observer</a></li><li><a href="/javascript-extend.html" class="sidebar-link">Extend in Javascript</a></li><li><a href="/javascript-trending.html" class="sidebar-link">Javascript Trending</a></li><li><a href="/lambda-functions.html" class="sidebar-link">Lambda Expressions</a></li><li><a href="/lazy-load.html" class="sidebar-link">Lazy Load on Web</a></li><li><a href="/lowdb-101.html" class="sidebar-link">LowDB Code Reading</a></li><li><a href="/material-ripple.html" class="sidebar-link">Material Ripple</a></li><li><a href="/modular-javascript.html" class="sidebar-link">Modular Javascript</a></li><li><a href="/node-reverse-proxy.html" class="sidebar-link">Node Reverse Proxy</a></li><li><a href="/nodejs-data-persistence.html" class="sidebar-link">NodeJS Data Persistence</a></li><li><a href="/npm-security.html" class="sidebar-link">NPM Security</a></li><li><a href="/object-creation.html" class="sidebar-link">Object Prototype Extending</a></li><li><a href="/openapi-cheatsheet.html" class="sidebar-link">OpenAPI Cheatsheet</a></li><li><a href="/overcoming-inituition-in-programming.html" class="sidebar-link">Programming Intuition</a></li><li><a href="/pixijs-101.html" class="sidebar-link">PixiJS 101</a></li><li><a href="/promise-optimization.html" class="sidebar-link">Promise Optimization</a></li><li><a href="/prototype-review.html" class="sidebar-link">Prototype Review</a></li><li><a href="/python-asyncio.html" class="sidebar-link">Python asyncio</a></li><li><a href="/react-fiber.html" class="sidebar-link">React Fiber</a></li><li><a href="/redux-saga.html" class="sidebar-link">Redux Saga</a></li><li><a href="/rust-101.html" class="sidebar-link">Rust 101</a></li><li><a href="/throttle-and-debounce.html" class="sidebar-link">Throttle and Debounce</a></li><li><a href="/typescript-and-node.html" class="sidebar-link">TypeScript and Node</a></li><li><a href="/typescript-and-react.html" class="sidebar-link">Typescript and React</a></li><li><a href="/undefined-in-javascript.html" class="sidebar-link">Undefined in Javascript</a></li><li><a href="/v8-async.html" class="sidebar-link">V8 Async</a></li><li><a href="/v8-sorting.html" class="sidebar-link">V8 Sorting</a></li><li><a href="/v8-torque.html" class="sidebar-link">V8 Torque</a></li><li><a href="/variable-length-curring.html" class="sidebar-link">Variable Length Curring</a></li><li><a href="/vue-impl-01.html" class="sidebar-link">Vue Implementation 01</a></li><li><a href="/vue-impl-02.html" class="sidebar-link">Vue Implementation 02</a></li><li><a href="/vue-impl-03.html" class="sidebar-link">Vue Implementation 03</a></li><li><a href="/vuex-typescript.html" class="sidebar-link">Vuex Typescript</a></li><li><a href="/webrtc-practice.html" class="sidebar-link">WebRTC Practice</a></li><li><a href="/websocket-practice.html" class="sidebar-link">Websocket Practice</a></li><li><a href="/webworker-caveats.html" class="sidebar-link">WebWorker Caveats</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="front-end-design-patterns"><a href="#front-end-design-patterns" aria-hidden="true" class="header-anchor">#</a> Front-End Design Patterns</h1> <p>原文：https://www.yuque.com/es2049/blog/al62bl#b2s1lc</p> <h2 id="开闭原则"><a href="#开闭原则" aria-hidden="true" class="header-anchor">#</a> 开闭原则</h2> <p>说到面向对象设计，大部分人脑海中闪过的恐怕都是“23种设计模式”。设计模式代表的是业务场景中总结出的最佳实现方式，属于实践的范畴，在其之上是更为重要的“SOLID”五大原则：</p> <ul><li><p>Single Responsibility Principle 单一责任原则</p></li> <li><p>The Open Closed Principle 开放封闭原则</p></li> <li><p>The Liskov Substitution Principle	里氏替换原则</p></li> <li><p>The Dependency Inversion Principle	依赖倒置原则</p></li> <li><p>The Interface Segregation Principle	接口分离原则</p></li></ul> <p>SOLID 五大原则的出发点也是软件工程的终极目标：“高内聚、低耦合”。在后端开发中运用最多的是“依赖倒置原则”，与其相关的设计模式大约有5-6个。如下图所示：</p> <p><img src="https://img.alicdn.com/tfs/TB1rnGWt8LoK1RjSZFuXXXn0XXa-692-311.png" alt="image | left"></p> <p>上图也可以理解为从抽象概念到具体实践的逐步演进。</p> <p>在前端技术框架中，运用最多的是“开放封闭原则”，我们先来看一下这条原则是怎么定义的：</p> <blockquote><p>A software artifact should be open for extension but closed for modification.</p></blockquote> <p>翻译过来就是：<strong>软件系统应当对扩展开放，对修改封闭（感觉像没说）。这里举一个简单的例子来说明开闭原则</strong>，先帮助大家理解概念：</p> <div class="language-c# extra-class"><pre class="language-text"><code>
+public abstract class Shape
+
+{
+
+ public abstract double Area(); 
+
+}
+
+
+
+public class Rectangle: Shape
+
+{
+
+ public double Width { get; set;}
+
+ public double Height { get; set;}
+
+ public override double Area()
+
+ {
+
+   return Width*Height'
+
+ }
+
+}
+
+
+
+public class Circle: Shape
+
+{
+
+ public double Radius { get; set}
+
+ public override double Area()
+
+ {
+
+  return Radius*Radius*PI;
+
+ }
+
+}
+
+
+
+public double Area(Shape [] shapes)
+
+{
+
+ doubel area = 0;
+
+ foreach (var shape in shapes)
+
+ {
+
+  area += shape.Area();
+
+ }
+
+ return area;
+
+}
+
+</code></pre></div><p>上例中无论场景如何扩展，Area 函数都无需修改，每个 Shape 类通过继承接口和多态特性，各自实现面积计算。</p> <p>总结一下开闭原则就是：<strong>软件系统的核心逻辑都不应该轻易改变，否则会破坏系统的稳定性和增加测试成本。我们应当建立合适的抽象并统一接口，当业务需要扩展时，我们可以通过增加实体类来完成。</strong></p> <p>接下来我们看一个“开闭原则”在前端框架中的应用： Ant Design 组件库中的 Form 表单组件。</p> <p>和其它组件不同，Form 组件并没有具体的形态，它更像是一个容器，提供了接入的标准，并提供了校验、表单提交等功能。绘制表单中的一项如下所示：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token operator">&lt;</span>FormItem<span class="token operator">&gt;</span>
+
+  <span class="token punctuation">{</span><span class="token function">getFieldDecorator</span><span class="token punctuation">(</span><span class="token string">'userName'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+
+     rules<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> required<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> message<span class="token punctuation">:</span> <span class="token string">'Please input your username!'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>Input prefix<span class="token operator">=</span><span class="token punctuation">{</span><span class="token operator">&lt;</span>Icon type<span class="token operator">=</span><span class="token string">&quot;user&quot;</span> style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> color<span class="token punctuation">:</span> <span class="token string">'rgba(0,0,0,.25)'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">}</span>
+
+  placeholder<span class="token operator">=</span><span class="token string">&quot;Username&quot;</span> <span class="token operator">/</span><span class="token operator">&gt;</span>
+
+   <span class="token punctuation">)</span><span class="token punctuation">}</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>FormItem<span class="token operator">&gt;</span>
+
+</code></pre></div><p>Ant Design 组件库中已经提供个几乎所有的常见表单组件，如：Select 、Checkbox 、Radio 、Cascader 等，但在实际业务中，我们还是会需要设计业务相关的表单项，Form 表单通过统一组件接口的方式满足了这个技术需求，具体规约如下：</p> <p>自定义或第三方的表单控件，也可以与 Form 组件一起使用。只要该组件遵循以下的约定：</p> <blockquote><ol><li>提供受控属性 value 或其它与 valuePropName 的值同名的属性。</li></ol></blockquote> <blockquote><ol start="2"><li>提供 onChange 事件或 trigger 的值同名的事件。</li></ol></blockquote> <blockquote><ol start="3"><li>不能是函数式组件。</li></ol></blockquote> <p><a href="https://ant-design.gitee.io/components/form-cn/#components-form-demo-customized-form-controls" target="_blank" rel="noopener noreferrer">具体例子<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>这正是“开闭原则”的一个典型实践案例，即表单核心逻辑（校验、提交等）保持不变并封装在 Form 组件中，自定义表单项只需要满足上述三条规约，就能平滑接入到 Form 组件中，和 Ant Design 原生组件契合在一起。</p> <p>Ant Design 中的 Form 组件通过这样一个简洁的设计，完美提供了表单类型页面的统一解决方案。</p> <h2 id="函数式编程"><a href="#函数式编程" aria-hidden="true" class="header-anchor">#</a> 函数式编程</h2> <p>随着人工智能、区块链、AR、VR、新零售等业务场景的出现，产品界面交互正在变得越来越复杂，这就对现代的前端开发者提出了更高的要求。如何快速、正确、高效地开发出高复杂度页面是目前前端技术最需要解决的问题。</p> <p>函数式编程（以下简称 FP ）凭借其高复用性、易测试性和与之带来的健壮性和简洁开始逐渐占据前端技术圈，我们发现越来越多的前端框架以 FP 为设计核心准则。</p> <p>我们先简单介绍一下 FP，函数式编程的特征主要包括以下几个方面：</p> <ul><li><p>函数为“一等公民”</p></li> <li><p>模块化、组合</p></li> <li><p>引用透明</p></li> <li><p>避免状态改变</p></li> <li><p>避免共享状态</p></li></ul> <p>JS 语言中的函数不同于 Java ，C/C++ 等语言, 可以被当做参数和返回值进行传递，因此天生具备“一等公民”特性。“模块化、组合”、“引用透明”、“避免状态改变”、“避免共享状态”这四个特征都需要通过特定代码模式实现。先举两个小例子：</p> <h3 id="找出字符串中率先出现的四个非数字字符？"><a href="#找出字符串中率先出现的四个非数字字符？" aria-hidden="true" class="header-anchor">#</a> 找出字符串中率先出现的四个非数字字符？</h3> <h5 id="非-fp-风格"><a href="#非-fp-风格" aria-hidden="true" class="header-anchor">#</a> 非 FP 风格</h5> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token keyword">var</span> words <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> text <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> couont <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">,</span> i <span class="token operator">&lt;</span> text<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>   
+
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>text<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token regex">/[0-9]/</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    words <span class="token operator">=</span> words<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>text<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+ count<span class="token operator">++</span><span class="token punctuation">;</span>   
+
+  <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span> 
+
+</code></pre></div><h5 id="fp-风格"><a href="#fp-风格" aria-hidden="true" class="header-anchor">#</a> FP 风格</h5> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token keyword">var</span> words <span class="token operator">=</span> str<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token operator">!</span>x<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token regex">/[1-9]+/</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><p>第二段代码中使用的 js 数组方法 filter 和 slice，去掉了 for 循环，代码更简洁流畅。在写具体业务代码的时候，“模块化、组合”是 FP 最常用的技术，也是最重要的实现功能的手段。</p> <h3 id="分别实现数组所有元素相加、相乘、相与？"><a href="#分别实现数组所有元素相加、相乘、相与？" aria-hidden="true" class="header-anchor">#</a> 分别实现数组所有元素相加、相乘、相与？</h3> <h5 id="非-fp-风格-2"><a href="#非-fp-风格-2" aria-hidden="true" class="header-anchor">#</a> 非 FP 风格</h5> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token keyword">function</span> <span class="token function">plus</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">var</span> res <span class="token operator">=</span> array<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    res <span class="token operator">+=</span> array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>   
+
+  <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+
+
+<span class="token keyword">function</span> <span class="token function">mul</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">var</span> res <span class="token operator">=</span> array<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    res <span class="token operator">*=</span> array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+
+
+<span class="token keyword">function</span> <span class="token function">and</span> <span class="token punctuation">(</span>array<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">var</span> res <span class="token operator">=</span> array<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    res <span class="token operator">=</span> res <span class="token operator">&amp;</span> array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+
+
+<span class="token function">plus</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">mul</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">and</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><h5 id="fp-风格-2"><a href="#fp-风格-2" aria-hidden="true" class="header-anchor">#</a> FP 风格</h5> <div class="language-javascript extra-class"><pre class="language-javascript"><code>
+<span class="token keyword">var</span> ops <span class="token operator">=</span> <span class="token punctuation">{</span> 
+
+  <span class="token string">&quot;plus&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token operator">=&gt;</span>x<span class="token operator">+</span>y<span class="token punctuation">,</span>
+
+  <span class="token string">&quot;mul&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token operator">=&gt;</span>x<span class="token operator">*</span>y<span class="token punctuation">,</span>
+
+  <span class="token string">&quot;and&quot;</span> <span class="token punctuation">:</span> <span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span><span class="token operator">=&gt;</span>x<span class="token operator">&amp;</span>y
+
+<span class="token punctuation">}</span>
+
+
+
+<span class="token keyword">function</span> <span class="token function">operation</span><span class="token punctuation">(</span>op<span class="token punctuation">,</span> array<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token keyword">return</span> array<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span>ops<span class="token punctuation">[</span>op<span class="token punctuation">]</span><span class="token punctuation">,</span> array<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span> 
+
+
+
+<span class="token function">operation</span><span class="token punctuation">(</span><span class="token string">&quot;plus&quot;</span><span class="token punctuation">,</span> array<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">operation</span><span class="token punctuation">(</span><span class="token string">&quot;mul&quot;</span><span class="token punctuation">,</span> array<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">operation</span><span class="token punctuation">(</span><span class="token string">&quot;and&quot;</span><span class="token punctuation">,</span> array<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+</code></pre></div><p>后一段代码中，使用了 reduce 函数代替了 for 循环，并将数值计算部分作为模块提取出来，当有新的计算类型时，只需要在 ops 对象中定义计算过程。这里就体现了 FP 中“模块化、组合”的特性。在 FP 风格下，我们习惯将复杂逻辑切割成一个个小模块，通过组合这些模块实现新的业务功能，当有新的需求到来时，我们尽可能地复用已有模块达到目标。FP 代码在复用性方面相比 OOD 有明显的优势。</p> <h3 id="react-中的-fp-思想"><a href="#react-中的-fp-思想" aria-hidden="true" class="header-anchor">#</a> React 中的 FP 思想</h3> <p>React 框架中，当用户操作 UI 或者 API 的返回带来了数据的改变，React 随即进行 virtual dom diff 计算得到 dom 的修改指令，对 dom 元素应用修改指令便得到最新的 html 界面，如下图所示：</p> <p><img src="https://img.alicdn.com/tfs/TB1zEuZt4TpK1RjSZFGXXcHqFXa-1120-530.png" alt="image | left"></p> <p>不难发现，React 其实是应用数据对UI的一种映射，不同的数据会映射出不同样式的 UI 界面，我们可以得出如下的表达式：</p> <blockquote><p>$UI = React(data)$</p></blockquote> <p>没错，<strong>React 的本质其实是一种函数</strong>，并且还是符合 FP 要求的“引用透明”函数。所谓“引用透明”就是指函数的输出仅依赖函数参数，不受任何外部环境影响。这样的函数可测试性强，也非常容易进行组合。</p> <p>在 React 的体系下，任何组件都可由一个个更小的组件构成，每个组件都只关心自己的输入，他们不断地接受新的数据并输出对应的新的UI界面。React 框架中常用的“高阶组件”可以看作引用透明”函数的组合模式。</p> <p>在具体业务中我们通常还需要权衡 React 组件的复用性和开发体验，如果组件被拆分的过于细，固然复用性会提升，但文件数量会增加，对应的文档和沟通成本也会增加，这也是 FP 在实践过程中经常遭人诟病的点，即复用性提升后带来的额外开发成本。</p> <h2 id="消息机制"><a href="#消息机制" aria-hidden="true" class="header-anchor">#</a> 消息机制</h2> <p>消息机制是软件工程中一个普遍运用的工程思想。“设计模式”中的观察者模式、Windows 操作系统底层、Spring 框架中的 ApplicationListener 模块、Objective-C 语言中的函数调用、都是通过消息机制驱动的。</p> <p>使用消息机制最大的好处在于可以做到业务模块间安全解耦，模块间通过发送消息的方式进行协作，我们先举一个后端开发中的例子，下图是一个简单的预定系统的建模图，并没有使用消息机制：</p> <p><img src="https://img.alicdn.com/tfs/TB1Uvrot4naK1RjSZFtXXbC2VXa-692-413.png" alt="image | left"></p> <p>在没有消息机制的情况下，用户模块需要知道订单模块的存在，并向起进行接口调用，同理订单模块需要向支付模块进行接口调用。这种设计下模块间是耦合的。</p> <p>我们再来看一下使用消息机制的情况：</p> <p><img src="https://img.alicdn.com/tfs/TB1Ose4t3HqK1RjSZJnXXbNLpXa-692-483.png" alt="image | left"></p> <p>上图中，无论是客户下订单、支付还是预定都是通过消息的方式传递的，每个模块都是向一个消息处理器起发消息，同时也监听消息处理器发送回来的消息。在这种模式下，模块完全不知道其它模块的存在，彻底做到了解耦。</p> <p>在前端业务开发中，我们经常也会用到 EventEmitter 库来进行消息传递。比如页面上有两块区域，一块用 React 框架渲染，一块用 D3 渲染的，当两块区域需要数据同步时，就可以使用消息机制进行通讯，保证页面数据整体一致。</p> <p>如果你的业务中有不同生命周期的组件，建议采用消息机制进行管理，<strong>不仅消除了耦合，逻辑关系部分的代码也集中到了一个文件中，内聚性得到了提升</strong>。</p> <p>使用消息机制的一个附属产物就是中间件，我们可以为消息定制各种中间件，在中间中完成一些通用逻辑，让业务代码更精炼。</p> <p>说到前端框架中消息机制的运用，当然首推 Redux 框架，在 Redux 框架中，任何数据交互都需要先转化为一个 action，由 action 去触发 reducer 和相关的 middleware 处理 action，改变数据，最终同步到页面 UI 上，如下图所示：</p> <p><img src="https://img.alicdn.com/tfs/TB1zeyZtYPpK1RjSZFFXXa5PpXa-692-439.png" alt="image | left"></p> <p>关于使用 Redux 的种种利弊，在各大社区中都有很深入的讨论，本文不再赘述。</p> <h2 id="总结"><a href="#总结" aria-hidden="true" class="header-anchor">#</a> 总结</h2> <p>“开闭原则”、“函数式编程”、“消息机制”这个三个软件工程中重要的思想方法好比三套内功口诀，掌握了他们，才能更深刻地理解技术框架本身，发挥出技术框架的最大威力。</p> <p>写到这里突然又想起《天龙八部》中一段：</p> <blockquote><p>乔峰眼见旁人退开，蓦地心念一动，呼的一拳打出，一招“冲阵斩将”，也正是“太祖长拳”中的招数。这一招姿式既潇洒大方已极，劲力更是刚中有柔，柔中有刚，武林高手毕生所盼望达到的拳术完美之境，竟在这一招中表露无遗。</p></blockquote> <p>一套平平无奇的“太祖长拳”在乔峰手中尽能有如此气象！</p> <p>多少年以后，每当人们聊起金庸，聊起那个武侠世界，想必都会津津有味地回味、谈论起聚贤庄中这石破天惊的一拳。</p></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/framework-analysis.html" class="prev">
+          Framework Analysis
+        </a></span> <span class="next"><a href="/front-end-interview.html">
+          Front-End Interview
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/app.f42c0b44.js" defer></script><script src="/assets/js/11.c36dcbcb.js" defer></script>
+  </body>
+</html>
